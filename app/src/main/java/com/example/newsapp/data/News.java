@@ -1,24 +1,22 @@
 package com.example.newsapp.data;
 
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.Ignore;
-import androidx.room.PrimaryKey;
+
+
+import com.google.gson.annotations.SerializedName;
 
 import java.net.URL;
 
-@Entity (tableName = "News")
 public class News {
-    @PrimaryKey (autoGenerate = true)
+    @SerializedName("Id")
     private int id;
 
-    @ColumnInfo (name = "ImageUrl")
+   @SerializedName("ImageUrl")
     private String imageUrl;
 
-    @ColumnInfo (name = "Headlines")
+    @SerializedName("Headlines")
     private String headlines;
 
-    @ColumnInfo (name = "Summary")
+    @SerializedName("Summary")
     private String summary;
 
     public News(){
@@ -31,7 +29,6 @@ public class News {
         this.summary = mSummary;
     }
 
-    @Ignore
     public News(int mId, String mImageUrl, String mHeadlines, String mSummary){
         this.id = mId;
         this.imageUrl = mImageUrl;
