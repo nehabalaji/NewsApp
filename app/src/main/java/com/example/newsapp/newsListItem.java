@@ -22,5 +22,7 @@ public class newsListItem extends AppCompatActivity {
 
         Headline.setText(headline);
 
+
+
     }
 }
