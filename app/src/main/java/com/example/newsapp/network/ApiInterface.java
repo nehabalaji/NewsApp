@@ -7,9 +7,8 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
-public interface getDataService {
+public interface ApiInterface {
 
-    @GET("/mostpopular/v2/viewed/1.json?api-key=kJjegnNI2NldBOsCzEmyaiNqBaXhyk18")
+    @GET("topstories/v2/world.json?api-key=kJjegnNI2NldBOsCzEmyaiNqBaXhyk18")
     Call<List<News>> getNews();
-
 }
