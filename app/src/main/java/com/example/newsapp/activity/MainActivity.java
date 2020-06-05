@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     List<News> newsList;
     RecyclerView recyclerView;
     RecyclerViewAdapter recyclerViewAdapter;
+    private static final String API_KEY = "kJjegnNI2NldBOsCzEmyaiNqBaXhyk18";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
-        Call<List<News>> call = apiService.getNews();
+        Call<List<News>> call = apiService.getNews(API_KEY);
         call.enqueue(new Callback<List<News>>() {
             @Override
             public void onResponse(Call<List<News>> call, Response<List<News>> response) {

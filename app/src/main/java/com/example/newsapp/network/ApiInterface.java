@@ -6,9 +6,10 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 public interface ApiInterface {
 
-    @GET("topstories/v2/world.json?api-key=kJjegnNI2NldBOsCzEmyaiNqBaXhyk18")
-    Call<List<News>> getNews();
+    @GET("topstories/v2/world.json")
+    Call<List<News>> getNews(@Query("api-key") String ApiKey);
 }
