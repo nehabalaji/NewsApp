@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<News>> call, Throwable t) {
                 Log.d("TAG","Response = "+t.toString());
+                
             }
         });
 
